@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sala de Aula</title>
+</head>
+<body>
+<div>
+    <p><b>Lista de Professores</b></p>
+    <div id="professores">
+        <table style="text-align: center">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in professores %}
+                <tr>
+                    <td>{{ item['id'] }}</td>
+                    <td>{{ item['nome'] }}</td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+<div>
+    <p><b>Lista de Alunos</b></p>
+    <div id="alunos">
+        <table style="text-align: center">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Matricula</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in alunos %}
+                <tr>
+                    <td>{{ item['id'] }}</td>
+                    <td>{{ item['nome'] }}</td>
+                    <td>{{ item['matricula'] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>
